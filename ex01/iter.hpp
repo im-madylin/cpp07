@@ -1,10 +1,24 @@
 #ifndef ITER_HPP
 #define ITER_HPP
 
-template <typename T1, typename T2>
-void iter(T1 array[], unsigned int len, T2 funptr)
-{
+#include <iostream>
 
+template <typename T>
+void    iter(const T array[], unsigned int len, void func(const T &))
+{
+    if (len == 0 || !array || !funptr)
+        return ;
+    
+    for (unsigned int i = 0; i < len; i++)
+    {
+        funptr(array[i]);
+    }
+}
+
+template <typename T>
+void    printValue(const T &value)
+{
+    std::cout << value << std::endl;
 }
 
 #endif
