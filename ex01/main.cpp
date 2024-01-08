@@ -8,10 +8,10 @@ int main()
     std::string strArray[4] = {"hi", "my", "name is", "hahlee"};
     const int constArray[3] = {100, 200, 300};
 
-    iter(constArray, 3, printValue);
     iter(intArray, 5, printValue);
     iter(doubleArray, 3, printValue);
     iter(strArray, 4, printValue);
+    iter(constArray, 3, printValue);
 
     return 0;
 }
